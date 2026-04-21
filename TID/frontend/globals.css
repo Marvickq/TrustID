@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #14b8a6;
+  --brand-dim: #14b8a620;
+  --surface-900: #0f172a;
+  --surface-950: #080d1a;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--surface-950); }
+::-webkit-scrollbar-thumb { background: #14b8a640; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #14b8a6; }
+
+/* Selection */
+::selection { background: #14b8a630; color: #5eead4; }
+
+/* Grid bg */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(20, 184, 166, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 184, 166, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Glow card */
+.glow-card {
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  box-shadow: 0 0 30px rgba(20, 184, 166, 0.05), inset 0 1px 0 rgba(255,255,255,0.05);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.glow-card:hover {
+  border-color: rgba(20, 184, 166, 0.4);
+  box-shadow: 0 0 40px rgba(20, 184, 166, 0.12), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* Credential badge */
+.credential-badge {
+  background: linear-gradient(135deg, #1e293b 0%, #0f1f2e 100%);
+  border: 1px solid rgba(20, 184, 166, 0.25);
+  border-radius: 12px;
+}
+
+/* ZK proof pulse */
+@keyframes zk-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.05); }
+}
+.zk-pulse { animation: zk-pulse 2s ease-in-out infinite; }
+
+/* Hex grid decoration */
+@keyframes hex-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.hex-spin { animation: hex-rotate 20s linear infinite; }
