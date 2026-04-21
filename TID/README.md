@@ -203,22 +203,7 @@ function _verifyUltraPlonk(...) internal view returns (bool) {
 - Only the proof and public inputs are sent on-chain
 - Use encrypted localStorage or a hardware wallet for key storage in production
 
----
 
-## Hackathon Checklist
-
-- [x] Decentralized Identity (DID) creation on-chain
-- [x] Verifiable Credential issuance by authorized issuers
-- [x] ZK proof generation (age, credential ownership, identity)
-- [x] QR + link-based proof sharing
-- [x] On-chain proof verification with replay protection (nullifiers)
-- [x] User dashboard — manage credentials, share proofs, activity log
-- [ ] Biometric login simulation (add `wagmi` SIWE + WebAuthn)
-- [ ] IPFS encrypted credential metadata storage
-- [ ] Mobile-responsive UI polish
-- [ ] Cross-agency issuer registry
-
----
 
 ## Tech Stack
 
